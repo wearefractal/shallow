@@ -1,11 +1,11 @@
 function loadDocument(event) {
-    var route = event.value ? event.value : '/' + event;
-    if (event == '/' || event == ''){
+    var route = event.value ? event.value : event;
+    if (!route || route == '/' || route == ''){
         return;
     }
-    var url = 'http://substance.io' + route + '.html';
+    var url = 'http://substance.io/' + settings.substance + '/' + route + '.html';
     //var url = '.' + route + '.html';
-    $('# ' + route).toggleClass('active');
+    $('#' + route).toggleClass('active');
     $.get(url, function (data) {
         $('#document').html(blog_templates.document.render({
             html: data
@@ -13,7 +13,7 @@ function loadDocument(event) {
     });
 }
 
-function render(settings) {
+function render() {
     window.user = {
         posts: []
     };
@@ -32,7 +32,7 @@ function render(settings) {
         $('#documents').html(blog_templates.documents.render(user));
         if (user.posts.length > 0) {
             console.log(user.posts[0]);
-            loadDocument(user.posts[0].author + '/' + user.posts[0].name);
+            loadDocument(user.posts[0].name);
         }
     });
 }
