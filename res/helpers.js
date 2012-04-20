@@ -1,9 +1,11 @@
 function loadDocument(event) {
-    var route = event.value ? event.value : event;
+    var route = event.value ? event.value : '/' + event;
     var url = 'http://substance.io' + route + '.html';
     //var url = '.' + route + '.html';
     $.get(url, function (data) {
-      $('#document').html(templates.document.render({html:data}));
+        $('#document').html(templates.document.render({
+            html: data
+        }));
     });
 }
 
@@ -17,7 +19,7 @@ function render(settings) {
     $.get('http://substance.io/documents/' + settings.substance, function (data) {
         if (data.graph) {
             for (var path in data.graph) {
-                if(path.indexOf('/user/') != 0) {
+                if (path.indexOf('/user/') != 0) {
                     user.posts.push(data.graph[path]);
                 }
             }
