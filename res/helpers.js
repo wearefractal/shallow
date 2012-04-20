@@ -6,7 +6,7 @@ function loadDocument(event) {
     var url = 'http://substance.io' + route + '.html';
     //var url = '.' + route + '.html';
     $.get(url, function (data) {
-        $('#document').html(templates.document.render({
+        $('#document').html(blog_templates.document.render({
             html: data
         }));
     });
@@ -18,7 +18,7 @@ function render(settings) {
     var user = {
         posts: []
     };
-    $('.header').html(templates.header.render(settings));
+    $('.header').html(blog_templates.header.render(settings));
     $.get('http://substance.io/documents/' + settings.substance, function (data) {
         if (data.graph) {
             for (var path in data.graph) {
@@ -30,7 +30,7 @@ function render(settings) {
                 }
             }
         }
-        $('#documents').html(templates.documents.render(user));
+        $('#documents').html(blog_templates.documents.render(user));
         if (user.posts.length > 0) {
             console.log(user.posts[0]);
             loadDocument(user.posts[0].author + '/' + user.posts[0].name);
