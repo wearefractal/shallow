@@ -151,7 +151,7 @@ div {
 }
 
 #document .title {
-  padding-top: 40px;
+  /*padding-top: 40px;*/
   font-size: 60px;
   line-height: 70px;
   text-align: center;
