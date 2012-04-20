@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Fractal</title>
+      <link href="styles.css" media="screen" rel="stylesheet" type="text/css" />
+      <!-- libraries -->
+      <script src="jquery.js"></script>
+      <script src="https://raw.github.com/asual/jquery-address/master/src/jquery.address.js"></script>
+      <script src="http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js"></script>
+      <script src="helpers.js"></script>
+      <script src="templates.js"></script>
+      <script>
+         $(function () {
+             var settings = {
+                 name: 'Fractal',
+                 substance: 'wearefractal',
+                 github: 'wearefractal',
+                 twitter: 'wearefractal'
+             };
+             render(settings);
+         });
+      </script>
+   </head>
+   <body>
+      <div id="container">
+        <div class="header"></div>
+        <div id="wrapper">
+          <div id="browser">
+             <div id="documents"></div>
+          </div>
+          <div id="document"></div>
+        </div>
+      </div>
+   </body>
+</html>

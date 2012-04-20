@@ -1,0 +1,10 @@
+{{#posts}}
+  <a class="load-document" href="#/{{creator}}/{{name}}">
+   <div class="document {{active}}">
+     <div class="published">{{timeago}}</div>
+     <div class="title">{{title}}</div>
+     <div class="teaser">{{lead}}</div>
+   </div>
+  </a>
+{{/posts}}
+{{^posts}}No posts{{/posts}}

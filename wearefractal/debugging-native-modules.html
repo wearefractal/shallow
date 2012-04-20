@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Fractal" />
+  <title>Debugging Native Modules</title>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Debugging Native Modules</h1>
+<h2 class="author">Fractal</h2>
+</div>
+<h1 id="unable-to-load-shared-library">&quot;Unable to load shared library&quot;</h1>
+<p>You'll run into this issue if you have invalid symbols or haven't set up your links correctly. Proper error messages aren't included in node core (for cross-platform reasons - dlerror() is linux only) but we can set a breakpoint in gdb to get the job done. In v0.6.14 you'll need to set the breakpoint <a href="https://github.com/joyent/node/blob/v0.6.14/src/node.cc#L1558">here</a> using these commands. Replace RESULT with the result of the previous command</p>
+<pre><code>gdb --args node yourfile.js
+(gdb) break node.cc:1558
+(gdb) run
+(gdb) p/a dlerror()
+(gdb) x/s 0xRESULT</code></pre>
+<h1 id="runtime-errors">Runtime Errors</h1>
+<p>Debugging segmentation faults and other runtime errors is a bit easier.</p>
+<pre><code>gdb --args node yourfile.js
+(gdb) run
+(gdb) backtrace</code></pre>
+</body>
+</html>
