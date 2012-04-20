@@ -1,6 +1,9 @@
 function loadDocument(event) {
-    var route = event.value ? event.value : event;
-    var url = 'http://substance.io/' + route + '.html';
+    if (event == '/'){
+        return;
+    }
+    var route = event.value ? event.value : '/' + event;
+    var url = 'http://substance.io' + route + '.html';
     //var url = '.' + route + '.html';
     $.get(url, function (data) {
         $('#document').html(templates.document.render({
