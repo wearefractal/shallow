@@ -5,6 +5,7 @@ function loadDocument(event) {
     }
     var url = 'http://substance.io' + route + '.html';
     //var url = '.' + route + '.html';
+    $('#' + event.value)
     $.get(url, function (data) {
         $('#document').html(blog_templates.document.render({
             html: data
@@ -12,10 +13,8 @@ function loadDocument(event) {
     });
 }
 
-$.address.change(loadDocument);
-
 function render(settings) {
-    var user = {
+    window.user = {
         posts: []
     };
     $('.header').html(blog_templates.header.render(settings));
@@ -56,3 +55,9 @@ function prettyDate(time){
         day_diff < 7 && day_diff + " days ago" ||
         day_diff < 31 && Math.ceil( day_diff / 7 ) + " weeks ago";
 }
+
+$.address.change(loadDocument);
+$('.document').click(function (event){
+    $('.active').toggleClass('active');
+    $(this).toggleClass('active');
+});
