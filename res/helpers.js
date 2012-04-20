@@ -21,8 +21,8 @@ function render(settings) {
             for (var path in data.graph) {
                 var post = data.graph[path];
                 if (path.indexOf('/user/') != 0) {
-                    post.author = post.creator.split('/user/')[1];
-                    post.timeago = prettyData(post.published_on);
+                    post.author = post.creator.split('user/')[1];
+                    post.timeago = prettyDate(post.published_on);
                     user.posts.push(post);
                 }
             }
