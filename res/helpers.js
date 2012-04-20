@@ -20,8 +20,7 @@ function render(settings) {
         active: 'active',
         timeago: '2 days ago',
         title: 'Debugging native modules',
-        lead: '',
-        html: '<p>test1</p>'
+        lead: ''
     });
     $('#documents').html(templates.documents.render(user));
 
