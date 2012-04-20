@@ -1,11 +1,12 @@
 function loadDocument(event) {
     var route = event.value ? event.value : event;
+    console.log(event);
     if (!route || route == '/' || route == ''){
         return;
     }
     var url = 'http://substance.io/' + settings.substance + '/' + route + '.html';
     //var url = '.' + route + '.html';
-    $('#' + route).toggleClass('active');
+    $('#' + ).toggleClass('active');
     $.get(url, function (data) {
         $('#document').html(blog_templates.document.render({
             html: data
