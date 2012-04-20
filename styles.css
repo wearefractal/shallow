@@ -110,11 +110,7 @@ div {
   font-size: 20px;
 }
 
-#avatar {
-  height: 125px;
-  width: 125px;
-  display: block;
-}
+#avatar { display: block; }
 
 #navigation {
   position: absolute;
