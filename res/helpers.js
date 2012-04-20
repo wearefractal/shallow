@@ -5,7 +5,7 @@ function loadDocument(event) {
     }
     var url = 'http://substance.io' + route + '.html';
     //var url = '.' + route + '.html';
-    $('#' + event.value)
+    $('#' + route).toggleClass('active');
     $.get(url, function (data) {
         $('#document').html(blog_templates.document.render({
             html: data
@@ -59,5 +59,4 @@ function prettyDate(time){
 $.address.change(loadDocument);
 $('.document').click(function (event){
     $('.active').toggleClass('active');
-    $(this).toggleClass('active');
 });
