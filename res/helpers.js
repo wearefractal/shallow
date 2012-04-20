@@ -50,9 +50,6 @@ function render() {
             }
         }
         $('#documents').html(blog_templates.documents.render(user));
-        if (user.posts.length > 0 && $.address.value() == '/') {
-            $.address.value(user.posts[0].name);
-        }
     });
 }
 
