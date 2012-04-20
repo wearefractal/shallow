@@ -5,7 +5,7 @@ function loadDocument(event) {
     }
     var url = 'http://substance.io' + route + '.html';
     //var url = '.' + route + '.html';
-    $('#' + route).toggleClass('active');
+    $('# ' + route).toggleClass('active');
     $.get(url, function (data) {
         $('#document').html(blog_templates.document.render({
             html: data
