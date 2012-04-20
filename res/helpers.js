@@ -44,7 +44,7 @@ function render() {
                 var post = data.graph[path];
                 if (path.indexOf('/user/') != 0) {
                     post.author = post.creator.split('user/')[1];
-                    post.timeago = prettyDate(post.published_on);
+                    post.timeago = prettyDate(new Date(post.published_on).toDateString());
                     user.posts.push(post);
                 }
             }
