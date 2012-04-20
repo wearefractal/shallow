@@ -1,6 +1,8 @@
 shallow
 =======
 
+(This isn't working fully yet - stay tuned)
+
 Shallow will use AJAX to populate and render your blog at runtime - you never have to mess with updating anything!
 
 ## Instructions
@@ -9,7 +11,7 @@ Shallow will use AJAX to populate and render your blog at runtime - you never ha
 
 ```javascript
 var settings = {
-   name: 'Fractal',
+   name: 'your blog title',
    substance: 'your substance.io username',
    github: 'your github name',
    twitter: 'your twitter name'
