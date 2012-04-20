@@ -1,37 +1,32 @@
-$.address.change(function (event) {
-    console.log(event);
-    //var url = 'http://substance.io' + event.value + '.html';
-    var url = '.' + event.value + '.html';
+function loadDocument(event) {
+    var route = event.value ? event.value : event;
+    var url = 'http://substance.io' + route + '.html';
+    //var url = '.' + route + '.html';
     $.get(url, function (data) {
       $('#document').html(templates.document.render({html:data}));
     });
-});
+}
+
+$.address.change(loadDocument);
 
 function render(settings) {
     var user = {
         posts: []
     };
     $('.header').html(templates.header.render(settings));
-
-    user.posts.push({
-        _id: 'debugging-native-modules',
-        name: 'debugging-native-modules',
-        creator: 'wearefractal',
-        active: 'active',
-        timeago: '2 days ago',
-        title: 'Debugging native modules',
-        lead: ''
-    });
-    $('#documents').html(templates.documents.render(user));
-
     $.get('http://substance.io/documents/' + settings.substance, function (data) {
-        var path, post, _ref;
-        _ref = data.graph;
-        for (path in _ref) {
-          post = _ref[path];
-          user.posts.push(posts);
+        if (data.graph) {
+            for (var path in data.graph) {
+                if(path.indexOf('/user/') != 0) {
+                    user.posts.push(data.graph[path]);
+                }
+            }
         }
         $('#documents').html(templates.documents.render(user));
+        if (user.posts.length > 0) {
+            console.log(user.posts[0]);
+            loadDocument(user.posts[0].name);
+        }
     });
 }
 
