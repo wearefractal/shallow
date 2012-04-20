@@ -24,7 +24,8 @@ function loadDocument(event) {
     }
     var url = 'http://substance.io/' + settings.substance + '/' + name + '.html';
     //var url = '.' + route + '.html';
-    $('.active').toggleClass('active');
+    $('#' + window.currentDocument).toggleClass('active');
+    window.currentDocument = name;
     $('#' + name).toggleClass('active');
     $.get(url, function (data) {
         $('#document').html(blog_templates.document.render({
@@ -37,6 +38,7 @@ function render() {
     window.user = {
         posts: []
     };
+    window.currentDocument = null;
     $('.header').html(blog_templates.header.render(settings));
     $.get('http://substance.io/documents/' + settings.substance, function (data) {
         if (data.graph) {
@@ -50,8 +52,7 @@ function render() {
             }
         }
         $('#documents').html(blog_templates.documents.render(user));
-        if (user.posts.length > 0) {
-            console.log(user.posts[0]);
+        if (user.posts.length > 0 && !window.currentDocument) {
             loadDocument(user.posts[0].name);
         }
     });
