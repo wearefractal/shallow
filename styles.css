@@ -1,3 +1,4 @@
+/* All styling is done by @maxogden */
 /*
  Helpers
 ----------------------
@@ -99,7 +100,7 @@ div {
   font-family: 'HelveticaNeue-Light';
   color: #383D3D;
   font-size: 24px;
-  /*overflow: auto;*/
+  overflow: auto;
   position: relative;
   padding: 0;
 }
