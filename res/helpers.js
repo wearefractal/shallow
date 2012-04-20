@@ -1,5 +1,5 @@
 function loadDocument(event) {
-    if (event == '/'){
+    if (!event || event == '/' || event == ''){
         return;
     }
     var route = event.value ? event.value : '/' + event;
