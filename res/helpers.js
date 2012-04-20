@@ -24,10 +24,15 @@ function render(settings) {
         html: '<p>test1</p>'
     });
     $('#documents').html(templates.documents.render(user));
-    
+
     $.get('http://substance.io/documents/' + settings.substance, function (data) {
-        console.log(data);
-        //TODO: render posts
+        var path, post, _ref;
+        _ref = data.graph;
+        for (path in _ref) {
+          post = _ref[path];
+          user.posts.push(posts);
+        }
+        $('#documents').html(templates.documents.render(user));
     });
 }
 
