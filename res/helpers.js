@@ -24,12 +24,11 @@ function render(settings) {
         html: '<p>test1</p>'
     });
     $('#documents').html(templates.documents.render(user));
-    /*
-    $.get('http://substance.io/documents/' + settings.substance + '.json', function (data) {
+    
+    $.get('http://substance.io/documents/' + settings.substance, function (data) {
         console.log(data);
         //TODO: render posts
     });
-    */
 }
 
 function teaser(str) {

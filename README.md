@@ -3,7 +3,7 @@ shallow
 
 (This isn't working fully yet - stay tuned)
 
-Shallow will use AJAX to populate and render your blog at runtime - you never have to mess with updating anything!
+Shallow uses AJAX to populate and render your blog at runtime - you never have to mess with updating anything!
 
 ## Instructions
 
