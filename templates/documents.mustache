@@ -1,12 +1,10 @@
 {{#posts}}
   <a class="load-document" href="#{{author}}/{{name}}">
    <div class="document {{active}}">
-     <img class="preview" height="60" src="{{cover}}" />
-     <div>
-       <div class="published">{{timeago}}</div>
-       <div class="title">{{title}}</div>
-       <div class="teaser">{{views}} views</div>
-     </div>
+     <!-- <img class="preview" height="60" src="{{cover}}" /> -->
+     <div class="title">{{title}}</div>
+     <div class="published">{{timeago}}</div>
+     <div class="teaser">{{views}} views</div>
    </div>
   </a>
 {{/posts}}
