@@ -1,0 +1,27 @@
+var classv8_1_1internal_1_1_scope_info =
+[
+    [ "CallsEval", "classv8_1_1internal_1_1_scope_info.html#a432170e24589a5c5f9d1ad5bb1832623", null ],
+    [ "CallsNonStrictEval", "classv8_1_1internal_1_1_scope_info.html#a26e727a924e89a56dc8b7f0c086bcfef", null ],
+    [ "cast", "classv8_1_1internal_1_1_scope_info.html#a3b6554d5fac690479fdfa9881c5d3655", null ],
+    [ "ContextLength", "classv8_1_1internal_1_1_scope_info.html#aef66422f96d9e2414e05178e28dc3220", null ],
+    [ "ContextLocalInitFlag", "classv8_1_1internal_1_1_scope_info.html#a03953d8010b3cfa19b38242fc1c089b2", null ],
+    [ "ContextLocalMode", "classv8_1_1internal_1_1_scope_info.html#a591902882e5e0a03a3e4a47361ffe32f", null ],
+    [ "ContextLocalName", "classv8_1_1internal_1_1_scope_info.html#acca4416c621b0b833e57bca1d5dff907", null ],
+    [ "ContextSlotIndex", "classv8_1_1internal_1_1_scope_info.html#acf21bbe2df6e22acd76d13e2e10d5b1d", null ],
+    [ "Create", "classv8_1_1internal_1_1_scope_info.html#a04219f3f8f818bb8f1b30b95f2c5e831", null ],
+    [ "Empty", "classv8_1_1internal_1_1_scope_info.html#ab9d9785ac7a9bc832dec0fa0cf34ab89", null ],
+    [ "FunctionContextSlotIndex", "classv8_1_1internal_1_1_scope_info.html#a6f12ab64462159f6fd4226cdd14d2279", null ],
+    [ "FunctionName", "classv8_1_1internal_1_1_scope_info.html#aec59a674c5efc48b30488fa94e60952f", null ],
+    [ "HasContext", "classv8_1_1internal_1_1_scope_info.html#a594e740248cc61d0d13bd8a4d0a90ba0", null ],
+    [ "HasFunctionName", "classv8_1_1internal_1_1_scope_info.html#adaaee44a533df7b23de313ce5b0ee0c8", null ],
+    [ "HasHeapAllocatedLocals", "classv8_1_1internal_1_1_scope_info.html#a1208fd2b730b876332c68dbf842495b3", null ],
+    [ "language_mode", "classv8_1_1internal_1_1_scope_info.html#a1c3515dbe4bb6d991910ecb7a6001042", null ],
+    [ "LocalCount", "classv8_1_1internal_1_1_scope_info.html#a8c5ea06d07d096ba90f9508307aeba96", null ],
+    [ "LocalName", "classv8_1_1internal_1_1_scope_info.html#acdac107aacd45fbfed0068240e5616bc", null ],
+    [ "ParameterIndex", "classv8_1_1internal_1_1_scope_info.html#a00f9938ad8b3975ffa57dbde5bccd7f3", null ],
+    [ "ParameterName", "classv8_1_1internal_1_1_scope_info.html#add97fe28aedcb5de286d0d79fd291aef", null ],
+    [ "StackLocalName", "classv8_1_1internal_1_1_scope_info.html#af01df9ddb90605479c6c065e8df37287", null ],
+    [ "StackSlotCount", "classv8_1_1internal_1_1_scope_info.html#a29109c40318ea4adf095f4e295d39a46", null ],
+    [ "StackSlotIndex", "classv8_1_1internal_1_1_scope_info.html#a9d747b94a71c42e5eac3a2420c4686c9", null ],
+    [ "Type", "classv8_1_1internal_1_1_scope_info.html#ae800e0fd14795e85c84c751500029d01", null ]
+];

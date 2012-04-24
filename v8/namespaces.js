@@ -1,0 +1,27 @@
+var namespaces =
+[
+    [ "disasm", "namespacedisasm.html", "namespacedisasm" ],
+    [ "gc-nvp-trace-processor", "namespacegc-nvp-trace-processor.html", "namespacegc-nvp-trace-processor" ],
+    [ "gdb-v8-support", "namespacegdb-v8-support.html", "namespacegdb-v8-support" ],
+    [ "gen-postmortem-metadata", "namespacegen-postmortem-metadata.html", "namespacegen-postmortem-metadata" ],
+    [ "grokdump", "namespacegrokdump.html", "namespacegrokdump" ],
+    [ "i", "namespacei.html", null ],
+    [ "i::UnboundQueue", "namespacei_1_1_unbound_queue.html", "namespacei_1_1_unbound_queue" ],
+    [ "js2c", "namespacejs2c.html", "namespacejs2c" ],
+    [ "jsmin", "namespacejsmin.html", "namespacejsmin" ],
+    [ "ll_prof", "namespacell__prof.html", "namespacell__prof" ],
+    [ "macros", "namespacemacros.html", null ],
+    [ "presubmit", "namespacepresubmit.html", "namespacepresubmit" ],
+    [ "process-heap-prof", "namespaceprocess-heap-prof.html", "namespaceprocess-heap-prof" ],
+    [ "run-valgrind", "namespacerun-valgrind.html", "namespacerun-valgrind" ],
+    [ "stats-viewer", "namespacestats-viewer.html", "namespacestats-viewer" ],
+    [ "test", "namespacetest.html", "namespacetest" ],
+    [ "test-wrapper-gypbuild", "namespacetest-wrapper-gypbuild.html", "namespacetest-wrapper-gypbuild" ],
+    [ "testcfg", "namespacetestcfg.html", "namespacetestcfg" ],
+    [ "unibrow", "namespaceunibrow.html", "namespaceunibrow" ],
+    [ "utils", "namespaceutils.html", "namespaceutils" ],
+    [ "v8", "namespacev8.html", "namespacev8" ],
+    [ "v8::internal", "namespacev8_1_1internal.html", "namespacev8_1_1internal" ],
+    [ "v8::internal::ProfileSampler", "namespacev8_1_1internal_1_1_profile_sampler.html", "namespacev8_1_1internal_1_1_profile_sampler" ],
+    [ "v8::preparser", "namespacev8_1_1preparser.html", "namespacev8_1_1preparser" ]
+];
