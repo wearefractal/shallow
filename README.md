@@ -18,3 +18,7 @@ var settings = {
 
 2. Push the the folder to github.
 3. Start writing posts on substance.io!
+
+## Example
+
+http://contra.github.com/
