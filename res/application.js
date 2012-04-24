@@ -18,22 +18,19 @@ function prettyDate(time){
 }
 
 function loadDocument(event) {
-    var name = (event.value ? event.value : event).replace('/', '');
-    if (!name || name == ''){
+    var name = ((event.value != null) ? event.value : event).replace('/', '');
+    if (!name || name === ''){
         return;
     }
     var url = 'http://substance.io/' + settings.substance + '/' + name + '.html';
-    //var url = '.' + route + '.html';
-    $('.active').toggleClass('active');
-    $('#' + name).toggleClass('active');
+    $('.active').removeClass('active')
     $.get(url, function (data) {
-        $('#document').html(blog_templates.document.render({
-            html: data
-        }));
+        $('#' + name).addClass('active');
+        $('#document').html(blog_templates.document.render({html: data}));
     });
 }
 
-function render() {
+function start() {
     window.user = {
         posts: []
     };
@@ -50,7 +47,11 @@ function render() {
             }
         }
         $('#documents').html(blog_templates.documents.render(user));
+        if ($.address.value() === '/'){
+            loadDocument(user.posts[user.posts.length-1].name);
+        } else {
+            loadDocument($.address.value());
+        }
+        $.address.change(loadDocument);
     });
 }
-
-$.address.change(loadDocument);
