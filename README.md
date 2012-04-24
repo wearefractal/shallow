@@ -1,13 +1,11 @@
 shallow
 =======
 
-(This isn't working fully yet - stay tuned)
-
-Shallow uses AJAX to populate and render your blog at runtime - you never have to mess with updating anything!
+Shallow will populate and render your blog on page load - you never have to mess with updating anything!
 
 ## Instructions
 
-1. Edit index.html and fill in your account names. 
+1. Edit index.html and fill in your account names.
 
 ```javascript
 var settings = {
